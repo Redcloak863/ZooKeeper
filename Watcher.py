@@ -1,3 +1,5 @@
+import re
+
 camel = r"""
 Switching on the camera in the camel habitat...
  ___.-''''-.
@@ -121,5 +123,14 @@ It looks like we will soon have more rabbits!"""
 
 
 animals = [camel, lion, deer, goose, bat, rabbit]
-
-# write your code here
+leave = False
+while leave == False:
+    reply = input('Please enter the number of the habitat you would like to view: ')
+    p = re.compile('\d')
+    m = p.match(reply)
+    if m:
+        reply = int(reply)
+        print(animals[reply])
+    else:
+        leave = True
+        print("See you later!")
