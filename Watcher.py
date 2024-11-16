@@ -122,7 +122,7 @@ Switching on the camera in the rabbit habitat...
 It looks like we will soon have more rabbits!"""
 
 
-animals = [camel, lion, deer, goose, bat, rabbit]
+animals = [camel, lion, deer, goose, bat, rabbit] #Yeah, we coulda done this by matching names, but the assignment uses the indices.
 leave = False #Set the exit flag
 while leave == False: #Check the exit flag
     reply = input('Please enter the number of the habitat you would like to view: ')
