@@ -123,14 +123,14 @@ It looks like we will soon have more rabbits!"""
 
 
 animals = [camel, lion, deer, goose, bat, rabbit]
-leave = False
-while leave == False:
+leave = False #Set the exit flag
+while leave == False: #Check the exit flag
     reply = input('Please enter the number of the habitat you would like to view: ')
-    p = re.compile('\d')
+    p = re.compile('[0-5]') #Only 0-5 are valid cameras
     m = p.match(reply)
-    if m:
+    if m: #We got a valid camera number
         reply = int(reply)
         print(animals[reply])
-    else:
-        leave = True
+    else: #We did not get a valid camera to we're outta here!
+        leave = True #Exits on the next loop
         print("See you later!")
