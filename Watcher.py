@@ -1,4 +1,4 @@
-import re
+import re #This is the regular expression module
 
 camel = r"""
 Switching on the camera in the camel habitat...
